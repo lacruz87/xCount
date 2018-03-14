@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Particles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Event</th>
+      <th>Name</th>
+      <th>Data</th>
+      <th>Coreid</th>
+      <th>Published at</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @particles.each do |particle| %>
+      <tr>
+        <td><%= particle.event %></td>
+        <td><%= particle.name %></td>
+        <td><%= particle.data %></td>
+        <td><%= particle.coreid %></td>
+        <td><%= particle.published_at %></td>
+        <td><%= link_to 'Show', particle %></td>
+        <td><%= link_to 'Edit', edit_particle_path(particle) %></td>
+        <td><%= link_to 'Destroy', particle, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Particle', new_particle_path %>

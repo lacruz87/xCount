@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Event:</strong>
+  <%= @particle.event %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @particle.name %>
+</p>
+
+<p>
+  <strong>Data:</strong>
+  <%= @particle.data %>
+</p>
+
+<p>
+  <strong>Coreid:</strong>
+  <%= @particle.coreid %>
+</p>
+
+<p>
+  <strong>Published at:</strong>
+  <%= @particle.published_at %>
+</p>
+
+<%= link_to 'Edit', edit_particle_path(@particle) %> |
+<%= link_to 'Back', particles_path %>
