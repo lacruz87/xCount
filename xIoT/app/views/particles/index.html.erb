@@ -2,7 +2,11 @@
 
 <h1>Particles</h1>
 
-<table>
+<div>
+  <%= will_paginate @prop_casapi_info2s %>
+</div>
+<div class="table-responsive">
+<table class="table">
   <thead>
     <tr>
       <th>Event</th>
@@ -29,6 +33,7 @@
     <% end %>
   </tbody>
 </table>
+</div>
 
 <br>
 

@@ -1,0 +1,60 @@
+<%= form_with(model: sensor, local: true) do |form| %>
+  <% if sensor.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(sensor.errors.count, "error") %> prohibited this sensor from being saved:</h2>
+
+      <ul>
+      <% sensor.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :coreid %>
+    <%= form.text_field :coreid, id: :sensor_coreid %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ubicacion %>
+    <%= form.text_field :ubicacion, id: :sensor_ubicacion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :factor %>
+    <%= form.text_field :factor, id: :sensor_factor %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tipo %>
+    <%= form.text_field :tipo, id: :sensor_tipo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ultima_conexion %>
+    <%= form.text_field :ultima_conexion, id: :sensor_ultima_conexion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :empresa_id %>
+    <!--
+    <%= form.text_field :empresa_id, id: :sensor_empresa_id %>
+  -->
+    <%= form.select :empresa_id, options_for_select(Empresa.all.map{|s|[s.nombre_empresa, s.id]}) %>
+  </div>
+
+  <div class="field">
+    <%= form.label :centro %>
+    <%= form.text_field :centro, id: :sensor_centro %>
+  </div>
+
+  <div class="field">
+    <%= form.label :almacen %>
+    <%= form.text_field :almacen, id: :sensor_almacen %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

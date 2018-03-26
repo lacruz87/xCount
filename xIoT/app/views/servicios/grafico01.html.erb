@@ -1,0 +1,33 @@
+<html>
+  <head>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+      
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable(<%=raw @arr.to_s.gsub(/"/,"'")%>);
+
+        var options = {
+          isStacked: 'relative',
+          height: 300,
+          legend: {position: 'top', maxLines: 3},
+          vAxis: {
+            minValue: 0,
+            ticks: [0, .3, .6, .9, 1]
+          }
+        };
+
+        var chart = new google.visualization.SteppedAreaChart(document.getElementById('chart_div'));
+
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="chart_div" style="width: 900px; height: 500px;"></div>
+
+  </body>
+</html>

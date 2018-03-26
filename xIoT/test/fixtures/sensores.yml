@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  coreid: MyString
+  ubicacion: MyString
+  factor: MyString
+  tipo: MyString
+  ultima_conexion: MyString
+  empresa: one
+  centro: MyString
+  almacen: MyString
+
+two:
+  coreid: MyString
+  ubicacion: MyString
+  factor: MyString
+  tipo: MyString
+  ultima_conexion: MyString
+  empresa: two
+  centro: MyString
+  almacen: MyString

@@ -1,0 +1,42 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Event Ins</h1>
+
+
+<div class="table-responsive">
+<table class="table">
+  <thead>
+    <tr>
+      <th>Valor</th>
+      <th>Coreid</th>
+      <th>Published at dt</th>
+      <th>Tipo</th>
+      <th>Ubicacion</th>
+      <th>Centro</th>
+      <th>Almacen</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @event_ins.each do |event_in| %>
+      <tr>
+        <td><%= event_in.valor %></td>
+        <td><%= event_in.coreid %></td>
+        <td><%= event_in.published_at_dt %></td>
+        <td><%= event_in.tipo %></td>
+        <td><%= event_in.ubicacion %></td>
+        <td><%= event_in.centro %></td>
+        <td><%= event_in.almacen %></td>
+        <td><%= link_to 'Show', event_in %></td>
+        <td><%= link_to 'Edit', edit_event_in_path(event_in) %></td>
+        <td><%= link_to 'Destroy', event_in, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+
+<br>
+
+<%= link_to 'New Event In', new_event_in_path %>

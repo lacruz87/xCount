@@ -4,7 +4,7 @@ class ParticlesController < ApplicationController
   # GET /particles
   # GET /particles.json
   def index
-    @particles = Particle.all
+    @particles = Particle.paginate(:page => params[:page], :per_page => 20)
   end
 
   # GET /particles/1

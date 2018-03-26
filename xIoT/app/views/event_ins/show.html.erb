@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Valor:</strong>
+  <%= @event_in.valor %>
+</p>
+
+<p>
+  <strong>Coreid:</strong>
+  <%= @event_in.coreid %>
+</p>
+
+<p>
+  <strong>Published at dt:</strong>
+  <%= @event_in.published_at_dt %>
+</p>
+
+<p>
+  <strong>Tipo:</strong>
+  <%= @event_in.tipo %>
+</p>
+
+<p>
+  <strong>Ubicacion:</strong>
+  <%= @event_in.ubicacion %>
+</p>
+
+<p>
+  <strong>Centro:</strong>
+  <%= @event_in.centro %>
+</p>
+
+<p>
+  <strong>Almacen:</strong>
+  <%= @event_in.almacen %>
+</p>
+
+<%= link_to 'Edit', edit_event_in_path(@event_in) %> |
+<%= link_to 'Back', event_ins_path %>

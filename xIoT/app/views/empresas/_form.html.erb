@@ -1,0 +1,32 @@
+<%= form_with(model: empresa, local: true) do |form| %>
+  <% if empresa.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(empresa.errors.count, "error") %> prohibited this empresa from being saved:</h2>
+
+      <ul>
+      <% empresa.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nombre_empresa %>
+    <%= form.text_field :nombre_empresa, id: :empresa_nombre_empresa %>
+  </div>
+
+  <div class="field">
+    <%= form.label :rut_empresa %>
+    <%= form.text_field :rut_empresa, id: :empresa_rut_empresa %>
+  </div>
+
+  <div class="field">
+    <%= form.label :url_app %>
+    <%= form.text_field :url_app, id: :empresa_url_app %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

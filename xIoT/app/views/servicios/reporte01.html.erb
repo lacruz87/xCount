@@ -1,0 +1,79 @@
+
+<html>
+  <head>
+  	<meta http-equiv="refresh" content="3">
+   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+   <script type="text/javascript">
+      google.charts.load('current', {'packages':['gauge']});
+      google.charts.setOnLoadCallback(drawChart);
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart2);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Label', 'Value'],
+          ['OEE (LH)', Math.round(80+20 * Math.random())]
+        ]);
+
+        var options = {
+          width: 400, height: 120,
+          redFrom: 90, redTo: 100,
+          yellowFrom:75, yellowTo: 90,
+          minorTicks: 5
+        };
+
+        var chart = new google.visualization.Gauge(document.getElementById('chart_div'));
+
+        chart.draw(data, options);
+
+      }
+
+    function drawChart2() {
+        var data = google.visualization.arrayToDataTable(<%=raw @arr.to_s.gsub(/"/,"'")%>);
+
+        var options = {
+          isStacked: 'relative',
+          height: 300,
+          legend: {position: 'top', maxLines: 3},
+          vAxis: {
+            minValue: 0,
+            ticks: [0, .3, .6, .9, 1]
+          }
+        };
+
+        var chart = new google.visualization.SteppedAreaChart(document.getElementById('chart_div2'));
+
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+  	<h1>OEE Twig</h1>
+  	<div>
+  		<table>
+  			<tr>
+  				<td>
+				  	<div style="width: 400px; height: 500px;">
+
+				    <div id="chart_div" style="width: 400px; height: 120px;"></div>
+				    Unidades Producidas:
+				    <br/><%=@cuenta%>
+
+					</div>
+				</td>
+
+  				<td>
+			  				<div>
+
+					<div id="chart_div2" style="width: 900px; height: 500px;"></div>	
+
+
+					</div>
+				</td>
+			</tr>
+		</table>
+	</div>
+
+  </body>
+</html>

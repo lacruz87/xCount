@@ -8,46 +8,10 @@
 	"buffers":
 	[
 		{
-			"file": "xIoT/app/views/servicios/index.html.erb",
+			"file": "xIoT/app/views/event_ins/index.html.erb",
 			"settings":
 			{
-				"buffer_size": 84,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "xIoT/config/routes.rb",
-			"settings":
-			{
-				"buffer_size": 326,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "xIoT/app/controllers/servicios_controller.rb",
-			"settings":
-			{
-				"buffer_size": 74,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "xIoT/app/controllers/api_controller.rb",
-			"settings":
-			{
-				"buffer_size": 550,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "xIoT/app/views/particles/_particle.json.jbuilder",
-			"settings":
-			{
-				"buffer_size": 147,
+				"buffer_size": 1024,
 				"line_ending": "Unix"
 			}
 		}
@@ -111,14 +75,34 @@
 	[
 		"/home/lacruz/Desktop/xIoT/xCount/xIoT",
 		"/home/lacruz/Desktop/xIoT/xCount/xIoT/app",
-		"/home/lacruz/Desktop/xIoT/xCount/xIoT/app/controllers",
 		"/home/lacruz/Desktop/xIoT/xCount/xIoT/app/views",
-		"/home/lacruz/Desktop/xIoT/xCount/xIoT/app/views/particles",
+		"/home/lacruz/Desktop/xIoT/xCount/xIoT/app/views/event_ins",
 		"/home/lacruz/Desktop/xIoT/xCount/xIoT/app/views/servicios",
 		"/home/lacruz/Desktop/xIoT/xCount/xIoT/config"
 	],
 	"file_history":
 	[
+		"/home/lacruz/Desktop/xIoT/xCount/xIoT/app/views/layouts/application.html.erb",
+		"/home/lacruz/Desktop/xIoT/xCount/xIoT/app/controllers/servicios_controller.rb",
+		"/home/lacruz/Desktop/xIoT/xCount/xIoT/app/views/servicios/index.html.erb",
+		"/home/lacruz/Desktop/xIoT/xCount/xIoT/app/views/servicios/grafico01.html.erb",
+		"/home/lacruz/Desktop/xIoT/xCount/xIoT/app/views/servicios/contador.html.erb",
+		"/home/lacruz/Desktop/xIoT/xCount/xIoT/app/views/servicios/reporte01.html.erb",
+		"/home/lacruz/Desktop/xIoT/xCount/xIoT/app/controllers/api_controller.rb",
+		"/home/lacruz/Desktop/xIoT/xCount/xIoT/config/routes.rb",
+		"/home/lacruz/Desktop/xIoT/xCount/xIoT/app/controllers/event_ins_controller.rb",
+		"/home/lacruz/Desktop/xIoT/xCount/xIoT/app/views/sensores/index.html.erb",
+		"/home/lacruz/Desktop/xIoT/xCount/xIoT/app/views/event_ins/index.html.erb",
+		"/home/lacruz/Desktop/xIoT/xCount/xIoT/app/views/sensores/show.html.erb",
+		"/home/lacruz/Desktop/xIoT/xCount/xIoT/app/views/sensores/_form.html.erb",
+		"/home/lacruz/Desktop/xIoT/xCount/xIoT/app/views/empresas/index.html.erb",
+		"/home/lacruz/Desktop/xIoT/xCount/xIoT/app/views/particles/index.html.erb",
+		"/home/lacruz/Desktop/xIoT/xCount/xIoT/app/views/sensores/new.html.erb",
+		"/home/lacruz/Desktop/xIoT/xCount/xIoT/config/initializers/inflections.rb",
+		"/home/lacruz/Desktop/xIoT/xCount/xIoT/app/assets/stylesheets/application.scss",
+		"/home/lacruz/Desktop/xIoT/xCount/xIoT/Gemfile",
+		"/home/lacruz/Desktop/xIoT/xCount/xIoT/app/assets/javascripts/application.js",
+		"/home/lacruz/Desktop/xIoT/xCount/xIoT/app/controllers/particles_controller.rb",
 		"/home/lacruz/Desktop/xgis/xgis-wp/hushas01/app/views/prop_casapi_info2s/index.html.erb",
 		"/home/lacruz/Desktop/xgis/xgis-wp/map_services/config/application.rb",
 		"/home/lacruz/Desktop/xgis/xgis-wp/map_services/config/environments/production.rb",
@@ -188,7 +172,7 @@
 	],
 	"find":
 	{
-		"height": 23.0
+		"height": 51.0
 	},
 	"find_in_files":
 	{
@@ -202,6 +186,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"\n  ",
+			">\n",
+			"th",
+			"div"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -209,6 +197,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"li"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -219,128 +208,16 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "xIoT/app/views/servicios/index.html.erb",
+					"file": "xIoT/app/views/event_ins/index.html.erb",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 84,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								84,
-								84
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/HTML (Rails).sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "xIoT/config/routes.rb",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 326,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								168,
-								168
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "xIoT/app/controllers/servicios_controller.rb",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 74,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								69,
-								69
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "xIoT/app/controllers/api_controller.rb",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 550,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								549,
-								549
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "xIoT/app/views/particles/_particle.json.jbuilder",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 147,
+						"buffer_size": 1024,
 						"regions":
 						{
 						},
@@ -353,13 +230,15 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/Ruby/Ruby.sublime-syntax"
+							"syntax": "Packages/Rails/HTML (Rails).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -408,7 +287,7 @@
 	"project": "xIoT.sublime-project",
 	"replace":
 	{
-		"height": 42.0
+		"height": 94.0
 	},
 	"save_all_on_build": true,
 	"select_file":

@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  valor: 1.5
+  coreid: MyString
+  published_at_dt: 2018-03-25 23:23:16
+  tipo: MyString
+  ubicacion: MyString
+  centro: MyString
+  almacen: MyString
+
+two:
+  valor: 1.5
+  coreid: MyString
+  published_at_dt: 2018-03-25 23:23:16
+  tipo: MyString
+  ubicacion: MyString
+  centro: MyString
+  almacen: MyString

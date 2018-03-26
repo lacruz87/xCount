@@ -1,3 +1,32 @@
 <h1>Pruebas de las App</h1>
 </br>
 <%= link_to 'Particles Request', particles_path %>
+</br>
+<%= link_to 'Delete All events', api_deleteAll_path %>
+
+<p>
+
+	http://localhost:3000/api/particle_in?event=prod&data=1001&published_at=2018-03-25T23%3A52%3A50.801Z&coreid=350048000e51353338363333
+	</p>
+
+
+<h2> DOCUMENTACIÓN API </h2>
+
+<p>El web hook tiene que llamar un servicio REST GET a la url: <%=@url %></p>
+<p>Para la primera POC el link es: <%=@url2%></p>
+
+<h3> Parametros</h3>
+<li>Event</li>
+<li>Name - {{PARTICLE_EVENT_NAME}}</li>
+<li>Data - {{PARTICLE_EVENT_VALUE}}</li>
+<li>Coreid - {{PARTICLE_DEVICE_ID}}</li>
+<li>Published at - {{PARTICLE_PUBLISHED_AT}}</li>
+
+* en {} son las variables de Particle asociadas al campo de la tabla de la base de datos propia.
+
+<h2> Gráficos</h2>
+
+<li><%= link_to 'Contador', servicios_contador_path %></li>
+<li><%= link_to 'grafico01', servicios_grafico01_path %></li>
+<li><%= link_to 'Reporte01', servicios_reporte01_path %></li>
+

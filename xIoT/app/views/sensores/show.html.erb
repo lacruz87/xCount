@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Coreid:</strong>
+  <%= @sensor.coreid %>
+</p>
+
+<p>
+  <strong>Ubicacion:</strong>
+  <%= @sensor.ubicacion %>
+</p>
+
+<p>
+  <strong>Factor:</strong>
+  <%= @sensor.factor %>
+</p>
+
+<p>
+  <strong>Tipo:</strong>
+  <%= @sensor.tipo %>
+</p>
+
+<p>
+  <strong>Ultima conexion:</strong>
+  <%= @sensor.ultima_conexion %>
+</p>
+
+<p>
+  <strong>Empresa:</strong>
+  <%= @sensor.empresa.nombre_empresa %>
+</p>
+
+<p>
+  <strong>Centro:</strong>
+  <%= @sensor.centro %>
+</p>
+
+<p>
+  <strong>Almacen:</strong>
+  <%= @sensor.almacen %>
+</p>
+
+<%= link_to 'Edit', edit_sensor_path(@sensor) %> |
+<%= link_to 'Back', sensores_path %>
