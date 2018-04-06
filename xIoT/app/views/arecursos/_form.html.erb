@@ -1,0 +1,27 @@
+<%= form_with(model: arecurso, local: true) do |form| %>
+  <% if arecurso.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(arecurso.errors.count, "error") %> prohibited this arecurso from being saved:</h2>
+
+      <ul>
+      <% arecurso.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :acentro_id %>
+    <%= form.select :acentro_id, options_for_select(Acentro.all.map{|s|[s.nombre, s.id]}) %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nombre %>
+    <%= form.text_field :nombre, id: :arecurso_nombre %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

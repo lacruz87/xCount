@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Coreid:</strong>
+  <%= @wsubscribe.coreid %>
+</p>
+
+<p>
+  <strong>Id empresa:</strong>
+  <%= @wsubscribe.id_empresa %>
+</p>
+
+<p>
+  <strong>Empresa nombre:</strong>
+  <%= @wsubscribe.empresa_nombre %>
+</p>
+
+<p>
+  <strong>Empresa app url:</strong>
+  <%= @wsubscribe.empresa_app_url %>
+</p>
+
+<%= link_to 'Edit', edit_wsubscribe_path(@wsubscribe) %> |
+<%= link_to 'Back', wsubscribes_path %>

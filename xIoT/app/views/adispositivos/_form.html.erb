@@ -1,0 +1,57 @@
+<%= form_with(model: adispositivo, local: true) do |form| %>
+  <% if adispositivo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(adispositivo.errors.count, "error") %> prohibited this adispositivo from being saved:</h2>
+
+      <ul>
+      <% adispositivo.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :coreid %>
+    <%= form.text_field :coreid, id: :adispositivo_coreid %>
+  </div>
+
+  <div class="field">
+    <%= form.label :arecurso_id %>
+    <%= form.select :arecurso_id, options_for_select(Arecurso.all.map{|s|[s.nombre, s.id]}) %>
+  </div>
+
+  <div class="field">
+    <%= form.label :acentro_id %>
+    <%= form.select :acentro_id, options_for_select(Acentro.all.map{|s|[s.nombre, s.id]}) %>
+  </div>
+
+  <div class="field">
+    <%= form.label :instalacion_ref %>
+    <%= form.text_field :instalacion_ref, id: :adispositivo_instalacion_ref %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fabricante_core %>
+    <%= form.text_field :fabricante_core, id: :adispositivo_fabricante_core %>
+  </div>
+
+  <div class="field">
+    <%= form.label :firmware_version %>
+    <%= form.text_field :firmware_version, id: :adispositivo_firmware_version %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tipo_dispositivo %>
+    <%= form.text_field :tipo_dispositivo, id: :adispositivo_tipo_dispositivo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :software_version %>
+    <%= form.text_field :software_version, id: :adispositivo_software_version %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

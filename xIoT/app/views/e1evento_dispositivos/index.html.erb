@@ -1,0 +1,42 @@
+<p id="notice"><%= notice %></p>
+
+<h1>E1evento Dispositivos</h1>
+
+<div class="table-responsive">
+<table class="table">
+  <thead>
+    <tr>
+      <th>E1dispositivo</th>
+      <th>Pin</th>
+      <th>Um</th>
+      <th>Factor</th>
+      <th>E1recurso</th>
+      <th>E1tipo evento</th>
+      <th>Sub tipo evento</th>
+      <th>Clasificacion evento</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @e1evento_dispositivos.each do |e1evento_dispositivo| %>
+      <tr>
+        <td><%= e1evento_dispositivo.e1dispositivo.coreid %></td>
+        <td><%= e1evento_dispositivo.pin %></td>
+        <td><%= e1evento_dispositivo.UM %></td>
+        <td><%= e1evento_dispositivo.factor %></td>
+        <td><%= e1evento_dispositivo.e1recurso.nombre %></td>
+        <td><%= e1evento_dispositivo.e1tipo_evento.nombre %></td>
+        <td><%= e1evento_dispositivo.sub_tipo_evento %></td>
+        <td><%= e1evento_dispositivo.clasificacion_evento %></td>
+        <td><%= link_to 'Show', e1evento_dispositivo %></td>
+        <td><%= link_to 'Edit', edit_e1evento_dispositivo_path(e1evento_dispositivo) %></td>
+        <td><%= link_to 'Destroy', e1evento_dispositivo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+<br>
+
+<%= link_to 'New E1evento Dispositivo', new_e1evento_dispositivo_path %>

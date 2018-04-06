@@ -1,0 +1,27 @@
+<%= form_with(model: e1ubicacion, local: true) do |form| %>
+  <% if e1ubicacion.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(e1ubicacion.errors.count, "error") %> prohibited this e1ubicacion from being saved:</h2>
+
+      <ul>
+      <% e1ubicacion.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nombre %>
+    <%= form.text_field :nombre, id: :e1ubicacion_nombre %>
+  </div>
+
+  <div class="field">
+    <%= form.label :almacen %>
+    <%= form.text_field :almacen, id: :e1ubicacion_almacen %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

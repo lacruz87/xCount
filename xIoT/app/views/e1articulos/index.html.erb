@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>E1articulos</h1>
+<div class="table-responsive">
+<table class="table">
+  <thead>
+    <tr>
+      <th>Sku</th>
+      <th>Descripcion</th>
+      <th>Um</th>
+      <th>Formato</th>
+      <th>Familia</th>
+      <th>Sub familia</th>
+      <th>Ude1</th>
+      <th>Ude2</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @e1articulos.each do |e1articulo| %>
+      <tr>
+        <td><%= e1articulo.sku %></td>
+        <td><%= e1articulo.descripcion %></td>
+        <td><%= e1articulo.UM %></td>
+        <td><%= e1articulo.formato %></td>
+        <td><%= e1articulo.familia %></td>
+        <td><%= e1articulo.sub_Familia %></td>
+        <td><%= e1articulo.ude1 %></td>
+        <td><%= e1articulo.ude2 %></td>
+        <td><%= link_to 'Show', e1articulo %></td>
+        <td><%= link_to 'Edit', edit_e1articulo_path(e1articulo) %></td>
+        <td><%= link_to 'Destroy', e1articulo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+<br>
+
+<%= link_to 'New E1articulo', new_e1articulo_path %>

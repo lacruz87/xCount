@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<h1>E1centros</h1>
+
+<div class="table-responsive">
+<table class="table">
+  <thead>
+    <tr>
+      <th>E1empresa</th>
+      <th>Nombre</th>
+      <th>Descripcion</th>
+      <th>Direccion</th>
+      <th>Numero</th>
+      <th>Comuna</th>
+      <th>Region</th>
+      <th>Lat</th>
+      <th>Lng</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @e1centros.each do |e1centro| %>
+      <tr>
+        <td><%= e1centro.e1empresa.nombre_empresa %></td>
+        <td><%= e1centro.nombre %></td>
+        <td><%= e1centro.descripcion %></td>
+        <td><%= e1centro.direccion %></td>
+        <td><%= e1centro.numero %></td>
+        <td><%= e1centro.comuna %></td>
+        <td><%= e1centro.region %></td>
+        <td><%= e1centro.lat %></td>
+        <td><%= e1centro.lng %></td>
+        <td><%= link_to 'Show', e1centro %></td>
+        <td><%= link_to 'Edit', edit_e1centro_path(e1centro) %></td>
+        <td><%= link_to 'Destroy', e1centro, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+<br>
+
+<%= link_to 'New E1centro', new_e1centro_path %>

@@ -1,0 +1,2 @@
+class Wsubscribe < ApplicationRecord
+end

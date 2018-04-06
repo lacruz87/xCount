@@ -22,29 +22,78 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 
+
 				</button>
 				<div class="navbar-brand">Twig</div>
 			</div>
 			<div id="navbar" class="collapse navbar-collapse">
 				<ul class="nav navbar-nav">
 					<li class="active"><%=link_to "Home",root_path%> </li>
-					<li><%= link_to 'Particles Request', particles_path %></li>
-					<li><%= link_to 'Empresas', empresas_path %></li>
-					<li><%= link_to 'Sensores', sensores_path %></li>
-					<li><%= link_to 'Eventos Empresa Twig', event_ins_path %></li>
-				</ul>
-			</div><!--/.nav-collapse -->
-		</div>
-	</nav>
 
-	<div class="container">
-		<%= yield %>
-	</div>
-	<footer class="footer">
-		<div class="container footerdiv">
-			<span>Twig</span>
-		</div>
-	</footer>
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#">POC 1
+							<span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><%= link_to 'Particles Request', particles_path %></li>
+								<li><%= link_to 'Empresas', empresas_path %></li>
+								<li><%= link_to 'Sensores', sensores_path %></li>
+								<li><%= link_to 'Eventos Empresa Twig', event_ins_path %></li>
+							</ul>
+						</li>
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#">Twig Admin
+							<span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><%= link_to 'Eventos Dispositivo', aevento_dispositivos_path %></li>
+								<li><%= link_to 'Tipos de Eventos', atipo_eventos_path %></li>
+								<li><%= link_to 'Dispositivos', adispositivos_path %></li>
+								<li><%= link_to 'Recursos', arecursos_path %></li>
+								<li><%= link_to 'Centros', acentros_path %></li>
+								<li><%= link_to 'Empresas', aempresas_path %></li>
 
-</body>
-</html>
+							</ul>
+						</li>
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#">Web Hook
+							<span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><%= link_to 'Subscribes', wsubscribes_path %></li>
+								<li><%= link_to 'Particle In', w_ins_path %></li>
+
+							</ul>
+						</li>
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#">PEmpresa 1
+							<span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><%= link_to 'Datos Reporería', e1reporting_prods_path %></li>
+								<li><%= link_to 'Producción', e1produccions_path %></li>
+								<li><%= link_to 'Planes de Producción', e1planprods_path %></li>
+								<li><%= link_to 'Articulos', e1articulos_path %></li>
+								<li><%= link_to 'Eventos Dispositivo', e1evento_dispositivos_path %></li>
+								<li><%= link_to 'Tipos de Eventos', e1tipo_eventos_path %></li>
+								<li><%= link_to 'Dispositivos', e1dispositivos_path %></li>
+								<li><%= link_to 'Recursos', e1recursos_path %></li>
+								<li><%= link_to 'Ubicaciones', e1ubicacions_path %></li>
+								<li><%= link_to 'Centros', e1centros_path %></li>
+								<li><%= link_to 'Empresas', e1empresas_path %></li>
+
+							</ul>
+						</li>
+
+					</ul>
+				</div><!--/.nav-collapse -->
+			</div>
+		</nav>
+
+		<div class="container">
+			<%= yield %>
+		</div>
+		<footer class="footer">
+			<div class="container footerdiv">
+				<span>Twig</span>
+			</div>
+		</footer>
+
+	</body>
+	</html>

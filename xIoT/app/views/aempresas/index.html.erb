@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Aempresas</h1>
+
+<div class="table-responsive">
+<table class="table">
+  <thead>
+    <tr>
+      <th>Nombre empresa</th>
+      <th>Rut empresa</th>
+      <th>Url app</th>
+      <th>Url api</th>
+      <th>Tipo</th>
+      <th>Creado por</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @aempresas.each do |aempresa| %>
+      <tr>
+        <td><%= aempresa.nombre_empresa %></td>
+        <td><%= aempresa.rut_empresa %></td>
+        <td><%= aempresa.url_app %></td>
+        <td><%= aempresa.url_api %></td>
+        <td><%= aempresa.tipo %></td>
+        <td><%= aempresa.creado_por %></td>
+        <td><%= link_to 'Show', aempresa %></td>
+        <td><%= link_to 'Edit', edit_aempresa_path(aempresa) %></td>
+        <td><%= link_to 'Destroy', aempresa, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+<br>
+
+<%= link_to 'New Aempresa', new_aempresa_path %>

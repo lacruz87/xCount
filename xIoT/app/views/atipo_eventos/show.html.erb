@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @atipo_evento.nombre %>
+</p>
+
+<p>
+  <strong>Ruta bd:</strong>
+  <%= @atipo_evento.ruta_bd %>
+</p>
+
+<%= link_to 'Edit', edit_atipo_evento_path(@atipo_evento) %> |
+<%= link_to 'Back', atipo_eventos_path %>

@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<h1>W Ins</h1>
+
+<div class="table-responsive">
+<table class="table">
+  <thead>
+    <tr>
+      <th>Event</th>
+      <th>Name</th>
+      <th>Data</th>
+      <th>Coreid</th>
+      <th>Published at</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @w_ins.each do |w_in| %>
+      <tr>
+        <td><%= w_in.event %></td>
+        <td><%= w_in.name %></td>
+        <td><%= w_in.data %></td>
+        <td><%= w_in.coreid %></td>
+        <td><%= w_in.published_at %></td>
+        <td><%= link_to 'Show', w_in %></td>
+        <td><%= link_to 'Edit', edit_w_in_path(w_in) %></td>
+        <td><%= link_to 'Destroy', w_in, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+<br>
+
+<%= link_to 'New W In', new_w_in_path %>

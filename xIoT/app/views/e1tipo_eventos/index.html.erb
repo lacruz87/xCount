@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<h1>E1tipo Eventos</h1>
+
+<div class="table-responsive">
+<table class="table">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Ruta bd</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @e1tipo_eventos.each do |e1tipo_evento| %>
+      <tr>
+        <td><%= e1tipo_evento.nombre %></td>
+        <td><%= e1tipo_evento.ruta_bd %></td>
+        <td><%= link_to 'Show', e1tipo_evento %></td>
+        <td><%= link_to 'Edit', edit_e1tipo_evento_path(e1tipo_evento) %></td>
+        <td><%= link_to 'Destroy', e1tipo_evento, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+<br>
+
+<%= link_to 'New E1tipo Evento', new_e1tipo_evento_path %>

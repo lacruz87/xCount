@@ -1,0 +1,45 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Timestamp: 2018-04-05 22:07:02
+  recurso: MyString
+  centro: MyString
+  ubicacion: MyString
+  timestamp_5m: 2018-04-05 22:07:02
+  timestamp_10m: 2018-04-05 22:07:02
+  timestamp_30m: 2018-04-05 22:07:02
+  timestamp_1h: 2018-04-05 22:07:02
+  timestamp_8h: 2018-04-05 22:07:02
+  timestamp_24h: 2018-04-05
+  timestamp_w: 2018-04-05
+  timestamp_MM: 2018-04-05
+  timestamp_Y: 1
+  Q: 1.5
+  time_Q: 1.5
+  categoria: MyString
+  articulo: MyString
+  familia: MyString
+  sub_familia: MyString
+  referencia: MyString
+
+two:
+  Timestamp: 2018-04-05 22:07:02
+  recurso: MyString
+  centro: MyString
+  ubicacion: MyString
+  timestamp_5m: 2018-04-05 22:07:02
+  timestamp_10m: 2018-04-05 22:07:02
+  timestamp_30m: 2018-04-05 22:07:02
+  timestamp_1h: 2018-04-05 22:07:02
+  timestamp_8h: 2018-04-05 22:07:02
+  timestamp_24h: 2018-04-05
+  timestamp_w: 2018-04-05
+  timestamp_MM: 2018-04-05
+  timestamp_Y: 1
+  Q: 1.5
+  time_Q: 1.5
+  categoria: MyString
+  articulo: MyString
+  familia: MyString
+  sub_familia: MyString
+  referencia: MyString

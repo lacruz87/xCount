@@ -1,0 +1,47 @@
+<%= form_with(model: e1produccion, local: true) do |form| %>
+  <% if e1produccion.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(e1produccion.errors.count, "error") %> prohibited this e1produccion from being saved:</h2>
+
+      <ul>
+      <% e1produccion.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :timestamp %>
+    <%= form.datetime_select :timestamp, id: :e1produccion_timestamp %>
+  </div>
+
+  <div class="field">
+    <%= form.label :e1recurso_id %>
+    <%= form.text_field :e1recurso_id, id: :e1produccion_e1recurso_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :qty %>
+    <%= form.text_field :qty, id: :e1produccion_qty %>
+  </div>
+
+  <div class="field">
+    <%= form.label :e1articulo_id %>
+    <%= form.text_field :e1articulo_id, id: :e1produccion_e1articulo_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :in_ref %>
+    <%= form.text_field :in_ref, id: :e1produccion_in_ref %>
+  </div>
+
+  <div class="field">
+    <%= form.label :grupo %>
+    <%= form.text_field :grupo, id: :e1produccion_grupo %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

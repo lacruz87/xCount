@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+<h1>E1produccions</h1>
+
+<div class="table-responsive">
+<table class="table">
+  <thead>
+    <tr>
+      <th>Timestamp</th>
+      <th>E1recurso</th>
+      <th>Qty</th>
+      <th>E1articulo</th>
+      <th>In ref</th>
+      <th>Grupo</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @e1produccions.each do |e1produccion| %>
+      <tr>
+        <td><%= e1produccion.timestamp %></td>
+        <td><%= e1produccion.e1recurso.nombre %></td>
+        <td><%= e1produccion.qty %></td>
+        <td><%= e1produccion.e1articulo %></td>
+        <td><%= e1produccion.in_ref %></td>
+        <td><%= e1produccion.grupo %></td>
+        <td><%= link_to 'Show', e1produccion %></td>
+        <td><%= link_to 'Edit', edit_e1produccion_path(e1produccion) %></td>
+        <td><%= link_to 'Destroy', e1produccion, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+<br>
+
+<%= link_to 'New E1produccion', new_e1produccion_path %>

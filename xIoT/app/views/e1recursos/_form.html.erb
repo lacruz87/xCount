@@ -1,0 +1,52 @@
+<%= form_with(model: e1recurso, local: true) do |form| %>
+  <% if e1recurso.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(e1recurso.errors.count, "error") %> prohibited this e1recurso from being saved:</h2>
+
+      <ul>
+      <% e1recurso.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :e1centro_id %>
+    <%= form.select :e1centro_id, options_for_select(E1centro.all.map{|s|[s.nombre, s.id]}) %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nombre %>
+    <%= form.text_field :nombre, id: :e1recurso_nombre %>
+  </div>
+
+  <div class="field">
+    <%= form.label :e1ubicacion_id %>
+    <%= form.select :e1ubicacion_id, options_for_select(E1ubicacion.all.map{|s|[s.nombre, s.id]}), :include_blank => true %>
+  </div>
+
+  <div class="field">
+    <%= form.label :linea %>
+    <%= form.text_field :linea, id: :e1recurso_linea %>
+  </div>
+
+  <div class="field">
+    <%= form.label :familia %>
+    <%= form.text_field :familia, id: :e1recurso_familia %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tipo %>
+    <%= form.text_field :tipo, id: :e1recurso_tipo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :productividad_hora %>
+    <%= form.text_field :productividad_hora, id: :e1recurso_productividad_hora %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

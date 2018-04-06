@@ -1,0 +1,42 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Adispositivos</h1>
+
+<div class="table-responsive">
+<table class="table">
+  <thead>
+    <tr>
+      <th>Coreid</th>
+      <th>Arecurso</th>
+      <th>Acentro</th>
+      <th>Instalacion ref</th>
+      <th>Fabricante core</th>
+      <th>Firmware version</th>
+      <th>Tipo dispositivo</th>
+      <th>Software version</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @adispositivos.each do |adispositivo| %>
+      <tr>
+        <td><%= adispositivo.coreid %></td>
+        <td><%= adispositivo.arecurso.nombre %></td>
+        <td><%= adispositivo.acentro.nombre %></td>
+        <td><%= adispositivo.instalacion_ref %></td>
+        <td><%= adispositivo.fabricante_core %></td>
+        <td><%= adispositivo.firmware_version %></td>
+        <td><%= adispositivo.tipo_dispositivo %></td>
+        <td><%= adispositivo.software_version %></td>
+        <td><%= link_to 'Show', adispositivo %></td>
+        <td><%= link_to 'Edit', edit_adispositivo_path(adispositivo) %></td>
+        <td><%= link_to 'Destroy', adispositivo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+<br>
+
+<%= link_to 'New Adispositivo', new_adispositivo_path %>

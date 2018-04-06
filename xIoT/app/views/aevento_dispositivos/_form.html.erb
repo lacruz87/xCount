@@ -1,0 +1,52 @@
+<%= form_with(model: aevento_dispositivo, local: true) do |form| %>
+  <% if aevento_dispositivo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(aevento_dispositivo.errors.count, "error") %> prohibited this aevento_dispositivo from being saved:</h2>
+
+      <ul>
+      <% aevento_dispositivo.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :adispositivo_id %>
+    <%= form.select :adispositivo_id, options_for_select(Adispositivo.all.map{|s|[s.coreid, s.id]}) %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pin %>
+    <%= form.text_field :pin, id: :aevento_dispositivo_pin %>
+  </div>
+
+  <div class="field">
+    <%= form.label :UM %>
+    <%= form.text_field :UM, id: :aevento_dispositivo_UM %>
+  </div>
+
+  <div class="field">
+    <%= form.label :factor %>
+    <%= form.text_field :factor, id: :aevento_dispositivo_factor %>
+  </div>
+
+  <div class="field">
+    <%= form.label :arecurso_id %>
+    <%= form.select :arecurso_id, options_for_select(Arecurso.all.map{|s|[s.nombre, s.id]}) %>
+  </div>
+
+  <div class="field">
+    <%= form.label :atipo_evento_id %>
+    <%= form.select :atipo_evento_id, options_for_select(AtipoEvento.all.map{|s|[s.nombre, s.id]}) %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sub_tipo_evento %>
+    <%= form.text_field :sub_tipo_evento, id: :aevento_dispositivo_sub_tipo_evento %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

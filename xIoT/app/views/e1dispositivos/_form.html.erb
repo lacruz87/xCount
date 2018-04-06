@@ -1,0 +1,57 @@
+<%= form_with(model: e1dispositivo, local: true) do |form| %>
+  <% if e1dispositivo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(e1dispositivo.errors.count, "error") %> prohibited this e1dispositivo from being saved:</h2>
+
+      <ul>
+      <% e1dispositivo.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :coreid %>
+    <%= form.text_field :coreid, id: :e1dispositivo_coreid %>
+  </div>
+
+  <div class="field">
+    <%= form.label :e1recurso_id %>
+    <%= form.select :e1recurso_id, options_for_select(E1recurso.all.map{|s|[s.nombre, s.id]}) %>
+  </div>
+
+  <div class="field">
+    <%= form.label :e1centro_id %>
+    <%= form.select :e1centro_id, options_for_select(E1centro.all.map{|s|[s.nombre, s.id]}) %>
+  </div>
+
+  <div class="field">
+    <%= form.label :instalacion_ref %>
+    <%= form.text_field :instalacion_ref, id: :e1dispositivo_instalacion_ref %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fabricante_core %>
+    <%= form.text_field :fabricante_core, id: :e1dispositivo_fabricante_core %>
+  </div>
+
+  <div class="field">
+    <%= form.label :firmware_version %>
+    <%= form.text_field :firmware_version, id: :e1dispositivo_firmware_version %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tipo_dispositivo %>
+    <%= form.text_field :tipo_dispositivo, id: :e1dispositivo_tipo_dispositivo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :software_version %>
+    <%= form.text_field :software_version, id: :e1dispositivo_software_version %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

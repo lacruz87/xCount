@@ -1,0 +1,57 @@
+<%= form_with(model: e1evento_dispositivo, local: true) do |form| %>
+  <% if e1evento_dispositivo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(e1evento_dispositivo.errors.count, "error") %> prohibited this e1evento_dispositivo from being saved:</h2>
+
+      <ul>
+      <% e1evento_dispositivo.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :e1dispositivo_id %>
+    <%= form.text_field :e1dispositivo_id, id: :e1evento_dispositivo_e1dispositivo_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pin %>
+    <%= form.text_field :pin, id: :e1evento_dispositivo_pin %>
+  </div>
+
+  <div class="field">
+    <%= form.label :UM %>
+    <%= form.text_field :UM, id: :e1evento_dispositivo_UM %>
+  </div>
+
+  <div class="field">
+    <%= form.label :factor %>
+    <%= form.text_field :factor, id: :e1evento_dispositivo_factor %>
+  </div>
+
+  <div class="field">
+    <%= form.label :e1recurso_id %>
+    <%= form.text_field :e1recurso_id, id: :e1evento_dispositivo_e1recurso_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :e1tipo_evento_id %>
+    <%= form.text_field :e1tipo_evento_id, id: :e1evento_dispositivo_e1tipo_evento_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sub_tipo_evento %>
+    <%= form.text_field :sub_tipo_evento, id: :e1evento_dispositivo_sub_tipo_evento %>
+  </div>
+
+  <div class="field">
+    <%= form.label :clasificacion_evento %>
+    <%= form.text_field :clasificacion_evento, id: :e1evento_dispositivo_clasificacion_evento %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

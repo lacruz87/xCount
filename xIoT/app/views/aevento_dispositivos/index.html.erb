@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Aevento Dispositivos</h1>
+
+<div class="table-responsive">
+<table class="table">
+  <thead>
+    <tr>
+      <th>Adispositivo</th>
+      <th>Pin</th>
+      <th>Um</th>
+      <th>Factor</th>
+      <th>Arecurso</th>
+      <th>Atipo evento</th>
+      <th>Sub tipo evento</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @aevento_dispositivos.each do |aevento_dispositivo| %>
+      <tr>
+        <td><%= aevento_dispositivo.adispositivo.coreid %></td>
+        <td><%= aevento_dispositivo.pin %></td>
+        <td><%= aevento_dispositivo.UM %></td>
+        <td><%= aevento_dispositivo.factor %></td>
+        <td><%= aevento_dispositivo.arecurso.nombre %></td>
+        <td><%= aevento_dispositivo.atipo_evento.nombre %></td>
+        <td><%= aevento_dispositivo.sub_tipo_evento %></td>
+        <td><%= link_to 'Show', aevento_dispositivo %></td>
+        <td><%= link_to 'Edit', edit_aevento_dispositivo_path(aevento_dispositivo) %></td>
+        <td><%= link_to 'Destroy', aevento_dispositivo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+<br>
+
+<%= link_to 'New Aevento Dispositivo', new_aevento_dispositivo_path %>

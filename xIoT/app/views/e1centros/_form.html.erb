@@ -1,0 +1,65 @@
+<%= form_with(model: e1centro, local: true) do |form| %>
+  <% if e1centro.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(e1centro.errors.count, "error") %> prohibited this e1centro from being saved:</h2>
+
+      <ul>
+      <% e1centro.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :e1empresa_id %>
+    <!--
+    <%= form.text_field :e1empresa_id, id: :e1centro_e1empresa_id %>
+      -->
+    <%= form.select :e1empresa_id, options_for_select(E1empresa.all.map{|s|[s.nombre_empresa, s.id]}) %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nombre %>
+    <%= form.text_field :nombre, id: :e1centro_nombre %>
+  </div>
+
+  <div class="field">
+    <%= form.label :descripcion %>
+    <%= form.text_field :descripcion, id: :e1centro_descripcion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :direccion %>
+    <%= form.text_field :direccion, id: :e1centro_direccion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :numero %>
+    <%= form.number_field :numero, id: :e1centro_numero %>
+  </div>
+
+  <div class="field">
+    <%= form.label :comuna %>
+    <%= form.text_field :comuna, id: :e1centro_comuna %>
+  </div>
+
+  <div class="field">
+    <%= form.label :region %>
+    <%= form.text_field :region, id: :e1centro_region %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lat %>
+    <%= form.text_field :lat, id: :e1centro_lat %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lng %>
+    <%= form.text_field :lng, id: :e1centro_lng %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

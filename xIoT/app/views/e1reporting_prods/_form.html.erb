@@ -1,0 +1,117 @@
+<%= form_with(model: e1reporting_prod, local: true) do |form| %>
+  <% if e1reporting_prod.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(e1reporting_prod.errors.count, "error") %> prohibited this e1reporting_prod from being saved:</h2>
+
+      <ul>
+      <% e1reporting_prod.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Timestamp %>
+    <%= form.datetime_select :Timestamp, id: :e1reporting_prod_Timestamp %>
+  </div>
+
+  <div class="field">
+    <%= form.label :recurso %>
+    <%= form.text_field :recurso, id: :e1reporting_prod_recurso %>
+  </div>
+
+  <div class="field">
+    <%= form.label :centro %>
+    <%= form.text_field :centro, id: :e1reporting_prod_centro %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ubicacion %>
+    <%= form.text_field :ubicacion, id: :e1reporting_prod_ubicacion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :timestamp_5m %>
+    <%= form.datetime_select :timestamp_5m, id: :e1reporting_prod_timestamp_5m %>
+  </div>
+
+  <div class="field">
+    <%= form.label :timestamp_10m %>
+    <%= form.datetime_select :timestamp_10m, id: :e1reporting_prod_timestamp_10m %>
+  </div>
+
+  <div class="field">
+    <%= form.label :timestamp_30m %>
+    <%= form.datetime_select :timestamp_30m, id: :e1reporting_prod_timestamp_30m %>
+  </div>
+
+  <div class="field">
+    <%= form.label :timestamp_1h %>
+    <%= form.datetime_select :timestamp_1h, id: :e1reporting_prod_timestamp_1h %>
+  </div>
+
+  <div class="field">
+    <%= form.label :timestamp_8h %>
+    <%= form.datetime_select :timestamp_8h, id: :e1reporting_prod_timestamp_8h %>
+  </div>
+
+  <div class="field">
+    <%= form.label :timestamp_24h %>
+    <%= form.date_select :timestamp_24h, id: :e1reporting_prod_timestamp_24h %>
+  </div>
+
+  <div class="field">
+    <%= form.label :timestamp_w %>
+    <%= form.date_select :timestamp_w, id: :e1reporting_prod_timestamp_w %>
+  </div>
+
+  <div class="field">
+    <%= form.label :timestamp_MM %>
+    <%= form.date_select :timestamp_MM, id: :e1reporting_prod_timestamp_MM %>
+  </div>
+
+  <div class="field">
+    <%= form.label :timestamp_Y %>
+    <%= form.number_field :timestamp_Y, id: :e1reporting_prod_timestamp_Y %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Q %>
+    <%= form.text_field :Q, id: :e1reporting_prod_Q %>
+  </div>
+
+  <div class="field">
+    <%= form.label :time_Q %>
+    <%= form.text_field :time_Q, id: :e1reporting_prod_time_Q %>
+  </div>
+
+  <div class="field">
+    <%= form.label :categoria %>
+    <%= form.text_field :categoria, id: :e1reporting_prod_categoria %>
+  </div>
+
+  <div class="field">
+    <%= form.label :articulo %>
+    <%= form.text_field :articulo, id: :e1reporting_prod_articulo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :familia %>
+    <%= form.text_field :familia, id: :e1reporting_prod_familia %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sub_familia %>
+    <%= form.text_field :sub_familia, id: :e1reporting_prod_sub_familia %>
+  </div>
+
+  <div class="field">
+    <%= form.label :referencia %>
+    <%= form.text_field :referencia, id: :e1reporting_prod_referencia %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

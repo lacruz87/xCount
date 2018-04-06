@@ -1,0 +1,57 @@
+<%= form_with(model: e1planprod, local: true) do |form| %>
+  <% if e1planprod.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(e1planprod.errors.count, "error") %> prohibited this e1planprod from being saved:</h2>
+
+      <ul>
+      <% e1planprod.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :e1articulo_id %>
+    <%= form.text_field :e1articulo_id, id: :e1planprod_e1articulo_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :e1recurso_id %>
+    <%= form.text_field :e1recurso_id, id: :e1planprod_e1recurso_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :inicio_plan %>
+    <%= form.datetime_select :inicio_plan, id: :e1planprod_inicio_plan %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fin_plan %>
+    <%= form.datetime_select :fin_plan, id: :e1planprod_fin_plan %>
+  </div>
+
+  <div class="field">
+    <%= form.label :orden_trabajo %>
+    <%= form.text_field :orden_trabajo, id: :e1planprod_orden_trabajo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :q_plan %>
+    <%= form.text_field :q_plan, id: :e1planprod_q_plan %>
+  </div>
+
+  <div class="field">
+    <%= form.label :inicio_real %>
+    <%= form.datetime_select :inicio_real, id: :e1planprod_inicio_real %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fin_real %>
+    <%= form.datetime_select :fin_real, id: :e1planprod_fin_real %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

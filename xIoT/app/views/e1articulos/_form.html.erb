@@ -1,0 +1,57 @@
+<%= form_with(model: e1articulo, local: true) do |form| %>
+  <% if e1articulo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(e1articulo.errors.count, "error") %> prohibited this e1articulo from being saved:</h2>
+
+      <ul>
+      <% e1articulo.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :sku %>
+    <%= form.text_field :sku, id: :e1articulo_sku %>
+  </div>
+
+  <div class="field">
+    <%= form.label :descripcion %>
+    <%= form.text_field :descripcion, id: :e1articulo_descripcion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :UM %>
+    <%= form.text_field :UM, id: :e1articulo_UM %>
+  </div>
+
+  <div class="field">
+    <%= form.label :formato %>
+    <%= form.text_field :formato, id: :e1articulo_formato %>
+  </div>
+
+  <div class="field">
+    <%= form.label :familia %>
+    <%= form.text_field :familia, id: :e1articulo_familia %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sub_Familia %>
+    <%= form.text_field :sub_Familia, id: :e1articulo_sub_Familia %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ude1 %>
+    <%= form.text_field :ude1, id: :e1articulo_ude1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ude2 %>
+    <%= form.text_field :ude2, id: :e1articulo_ude2 %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  e1centro: one
+  nombre: MyString
+  e1ubicacion: one
+  linea: MyString
+  familia: MyString
+  tipo: MyString
+  productividad_hora: 1.5
+
+two:
+  e1centro: two
+  nombre: MyString
+  e1ubicacion: two
+  linea: MyString
+  familia: MyString
+  tipo: MyString
+  productividad_hora: 1.5

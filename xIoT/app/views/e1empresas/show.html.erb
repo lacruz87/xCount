@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre empresa:</strong>
+  <%= @e1empresa.nombre_empresa %>
+</p>
+
+<p>
+  <strong>Rut empresa:</strong>
+  <%= @e1empresa.rut_empresa %>
+</p>
+
+<p>
+  <strong>Url app:</strong>
+  <%= @e1empresa.url_app %>
+</p>
+
+<p>
+  <strong>Url api:</strong>
+  <%= @e1empresa.url_api %>
+</p>
+
+<p>
+  <strong>Tipo:</strong>
+  <%= @e1empresa.tipo %>
+</p>
+
+<p>
+  <strong>Creado por:</strong>
+  <%= @e1empresa.creado_por %>
+</p>
+
+<%= link_to 'Edit', edit_e1empresa_path(@e1empresa) %> |
+<%= link_to 'Back', e1empresas_path %>

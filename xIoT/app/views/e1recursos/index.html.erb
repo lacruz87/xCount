@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<h1>E1recursos</h1>
+
+<div class="table-responsive">
+<table class="table">
+  <thead>
+    <tr>
+      <th>E1centro</th>
+      <th>Nombre</th>
+      <th>E1ubicacion</th>
+      <th>Linea</th>
+      <th>Familia</th>
+      <th>Tipo</th>
+      <th>Productividad hora</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @e1recursos.each do |e1recurso| %>
+      <tr>
+        <td><%= e1recurso.e1centro.nombre %></td>
+        <td><%= e1recurso.nombre %></td>
+        <td><%= e1recurso.e1ubicacion.nombre if e1recurso.e1ubicacion %></td>
+        <td><%= e1recurso.linea %></td>
+        <td><%= e1recurso.familia %></td>
+        <td><%= e1recurso.tipo %></td>
+        <td><%= e1recurso.productividad_hora %></td>
+        <td><%= link_to 'Show', e1recurso %></td>
+        <td><%= link_to 'Edit', edit_e1recurso_path(e1recurso) %></td>
+        <td><%= link_to 'Destroy', e1recurso, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+<br>
+
+<%= link_to 'New E1recurso', new_e1recurso_path %>

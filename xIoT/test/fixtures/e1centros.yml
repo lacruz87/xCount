@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  e1empresa: one
+  nombre: MyString
+  descripcion: MyString
+  direccion: MyString
+  numero: 1
+  comuna: MyString
+  region: MyString
+  lat: MyString
+  lng: MyString
+
+two:
+  e1empresa: two
+  nombre: MyString
+  descripcion: MyString
+  direccion: MyString
+  numero: 1
+  comuna: MyString
+  region: MyString
+  lat: MyString
+  lng: MyString

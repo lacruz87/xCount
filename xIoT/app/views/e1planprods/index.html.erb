@@ -1,0 +1,42 @@
+<p id="notice"><%= notice %></p>
+
+<h1>E1planprods</h1>
+
+<div class="table-responsive">
+<table class="table">
+  <thead>
+    <tr>
+      <th>E1articulo</th>
+      <th>E1recurso</th>
+      <th>Inicio plan</th>
+      <th>Fin plan</th>
+      <th>Orden trabajo</th>
+      <th>Q plan</th>
+      <th>Inicio real</th>
+      <th>Fin real</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @e1planprods.each do |e1planprod| %>
+      <tr>
+        <td><%= e1planprod.e1articulo %></td>
+        <td><%= e1planprod.e1recurso %></td>
+        <td><%= e1planprod.inicio_plan %></td>
+        <td><%= e1planprod.fin_plan %></td>
+        <td><%= e1planprod.orden_trabajo %></td>
+        <td><%= e1planprod.q_plan %></td>
+        <td><%= e1planprod.inicio_real %></td>
+        <td><%= e1planprod.fin_real %></td>
+        <td><%= link_to 'Show', e1planprod %></td>
+        <td><%= link_to 'Edit', edit_e1planprod_path(e1planprod) %></td>
+        <td><%= link_to 'Destroy', e1planprod, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+<br>
+
+<%= link_to 'New E1planprod', new_e1planprod_path %>

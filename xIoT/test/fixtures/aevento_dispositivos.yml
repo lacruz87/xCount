@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  adispositivo: one
+  pin: MyString
+  UM: MyString
+  factor: 1.5
+  arecurso: one
+  atipo_evento: one
+  sub_tipo_evento: MyString
+
+two:
+  adispositivo: two
+  pin: MyString
+  UM: MyString
+  factor: 1.5
+  arecurso: two
+  atipo_evento: two
+  sub_tipo_evento: MyString

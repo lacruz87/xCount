@@ -1,0 +1,42 @@
+<%= form_with(model: w_in, local: true) do |form| %>
+  <% if w_in.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(w_in.errors.count, "error") %> prohibited this w_in from being saved:</h2>
+
+      <ul>
+      <% w_in.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :event %>
+    <%= form.text_field :event, id: :w_in_event %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :w_in_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :data %>
+    <%= form.text_field :data, id: :w_in_data %>
+  </div>
+
+  <div class="field">
+    <%= form.label :coreid %>
+    <%= form.text_field :coreid, id: :w_in_coreid %>
+  </div>
+
+  <div class="field">
+    <%= form.label :published_at %>
+    <%= form.text_field :published_at, id: :w_in_published_at %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  e1articulo: one
+  e1recurso: one
+  inicio_plan: 2018-04-05 22:05:24
+  fin_plan: 2018-04-05 22:05:24
+  orden_trabajo: MyString
+  q_plan: 1.5
+  inicio_real: 2018-04-05 22:05:24
+  fin_real: 2018-04-05 22:05:24
+
+two:
+  e1articulo: two
+  e1recurso: two
+  inicio_plan: 2018-04-05 22:05:24
+  fin_plan: 2018-04-05 22:05:24
+  orden_trabajo: MyString
+  q_plan: 1.5
+  inicio_real: 2018-04-05 22:05:24
+  fin_real: 2018-04-05 22:05:24

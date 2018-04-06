@@ -1,0 +1,2 @@
+module WsubscribesHelper
+end

@@ -1,0 +1,2 @@
+module WInsHelper
+end

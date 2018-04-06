@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Acentros</h1>
+
+<div class="table-responsive">
+<table class="table">
+    <tr>
+      <th>Aempresa</th>
+      <th>Nombre</th>
+      <th>Descripcion</th>
+      <th>Direccion</th>
+      <th>Numero</th>
+      <th>Comuna</th>
+      <th>Region</th>
+      <th>Lat</th>
+      <th>Lng</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @acentros.each do |acentro| %>
+      <tr>
+        <td><%= acentro.aempresa.nombre_empresa %></td>
+        <td><%= acentro.nombre %></td>
+        <td><%= acentro.descripcion %></td>
+        <td><%= acentro.direccion %></td>
+        <td><%= acentro.numero %></td>
+        <td><%= acentro.comuna %></td>
+        <td><%= acentro.region %></td>
+        <td><%= acentro.lat %></td>
+        <td><%= acentro.lng %></td>
+        <td><%= link_to 'Show', acentro %></td>
+        <td><%= link_to 'Edit', edit_acentro_path(acentro) %></td>
+        <td><%= link_to 'Destroy', acentro, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+<br>
+
+<%= link_to 'New Acentro', new_acentro_path %>

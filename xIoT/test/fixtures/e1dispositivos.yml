@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  coreid: MyString
+  e1recurso: one
+  e1centro: one
+  instalacion_ref: MyString
+  fabricante_core: MyString
+  firmware_version: MyString
+  tipo_dispositivo: MyString
+  software_version: MyString
+
+two:
+  coreid: MyString
+  e1recurso: two
+  e1centro: two
+  instalacion_ref: MyString
+  fabricante_core: MyString
+  firmware_version: MyString
+  tipo_dispositivo: MyString
+  software_version: MyString

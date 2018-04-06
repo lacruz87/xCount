@@ -1,0 +1,2 @@
+class WIn < ApplicationRecord
+end

@@ -1,0 +1,27 @@
+<%= form_with(model: atipo_evento, local: true) do |form| %>
+  <% if atipo_evento.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(atipo_evento.errors.count, "error") %> prohibited this atipo_evento from being saved:</h2>
+
+      <ul>
+      <% atipo_evento.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nombre %>
+    <%= form.text_field :nombre, id: :atipo_evento_nombre %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ruta_bd %>
+    <%= form.text_field :ruta_bd, id: :atipo_evento_ruta_bd %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

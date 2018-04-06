@@ -1,0 +1,65 @@
+<%= form_with(model: acentro, local: true) do |form| %>
+  <% if acentro.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(acentro.errors.count, "error") %> prohibited this acentro from being saved:</h2>
+
+      <ul>
+      <% acentro.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :aempresa_id %>
+    <!--
+    <%= form.text_field :aempresa_id, id: :acentro_aempresa_id %>
+      -->
+    <%= form.select :aempresa_id, options_for_select(Aempresa.all.map{|s|[s.nombre_empresa, s.id]}) %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nombre %>
+    <%= form.text_field :nombre, id: :acentro_nombre %>
+  </div>
+
+  <div class="field">
+    <%= form.label :descripcion %>
+    <%= form.text_field :descripcion, id: :acentro_descripcion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :direccion %>
+    <%= form.text_field :direccion, id: :acentro_direccion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :numero %>
+    <%= form.number_field :numero, id: :acentro_numero %>
+  </div>
+
+  <div class="field">
+    <%= form.label :comuna %>
+    <%= form.text_field :comuna, id: :acentro_comuna %>
+  </div>
+
+  <div class="field">
+    <%= form.label :region %>
+    <%= form.text_field :region, id: :acentro_region %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lat %>
+    <%= form.text_field :lat, id: :acentro_lat %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lng %>
+    <%= form.text_field :lng, id: :acentro_lng %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -8,10 +8,36 @@
 	"buffers":
 	[
 		{
+			"contents": "<p id=\"notice\"><%= notice %></p>\n\n<h1>Event Ins</h1>\n\n\n<div class=\"table-responsive\">\n<table class=\"table\">\n  <thead>\n    <tr>\n      <th>Valor</th>\n      <th>Coreid</th>\n      <th>Published at dt</th>\n      <th>Tipo</th>\n      <th>Ubicacion</th>\n      <th>Centro</th>\n      <th>Almacen</th>\n      <th colspan=\"3\"></th>\n    </tr>\n  </thead>\n\n  <tbody>\n    <% @event_ins.each do |event_in| %>\n      <tr>\n        <td><%= event_in.valor %></td>\n        <td><%= event_in.coreid %></td>\n        <td><%= event_in.published_at_dt %></td>\n        <td><%= event_in.tipo %></td>\n        <td><%= event_in.ubicacion %></td>\n        <td><%= event_in.centro %></td>\n        <td><%= event_in.almacen %></td>\n        <td><%= link_to 'Show', event_in %></td>\n        <td><%= link_to 'Edit', edit_event_in_path(event_in) %></td>\n        <td><%= link_to 'Destroy', event_in, method: :delete, data: { confirm: 'Are you sure?' } %></td>\n      </tr>\n    <% end %>\n  </tbody>\n</table>\n</div>\n\n<br>\n\n<%= link_to 'New Event In', new_event_in_path %>\n",
 			"file": "xIoT/app/views/event_ins/index.html.erb",
+			"file_size": 1024,
+			"file_write_time": 131674466278741098,
 			"settings":
 			{
 				"buffer_size": 1024,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "<!DOCTYPE html>\n<html>\n<head>\n\t<title>XIoT</title>\n\t<%= csrf_meta_tags %>\n\n\t<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>\n\t<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>\n\n\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n</head>\n\n<body>\n\n\t<nav class=\"navbar navbar navbar-fixed-top navbar-default\">\n\t\t<div class=\"container\">\n\t\t\t<div class=\"navbar-header\">\n\t\t\t\t<button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#navbar\" aria-expanded=\"false\" aria-controls=\"navbar\">\n\t\t\t\t\t<span class=\"sr-only\">Toggle navigation</span>\n\t\t\t\t\t<span class=\"icon-bar\"></span>\n\n\t\t\t\t</button>\n\t\t\t\t<div class=\"navbar-brand\">Twig</div>\n\t\t\t</div>\n\t\t\t<div id=\"navbar\" class=\"collapse navbar-collapse\">\n\t\t\t\t<ul class=\"nav navbar-nav\">\n\t\t\t\t\t<li class=\"active\"><%=link_to \"Home\",root_path%> </li>\n\t\t\t\t\t<li class=\"dropdown\">\n\t\t\t\t\t\t<a class=\"dropdown-toggle\" data-toggle=\"dropdown\" href=\"#\">POC1\n\t\t\t\t\t\t<span class=\"caret\"></span></a>\n\t\t\t\t\t\t<ul class=\"dropdown-menu\">\n\t\t\t\t\t\t\t<li><%= link_to 'Particles Request', particles_path %></li>\n\t\t\t\t\t\t\t<li><%= link_to 'Empresas', empresas_path %></li>\n\t\t\t\t\t\t\t<li><%= link_to 'Sensores', sensores_path %></li>\n\t\t\t\t\t\t\t<li><%= link_to 'Eventos Empresa Twig', event_ins_path %></li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t</li>\n\t\t\t\t</ul>\n\t\t\t</div><!--/.nav-collapse -->\n\t\t</div>\n\t</nav>\n\n\t<div class=\"container\">\n\t\t<%= yield %>\n\t</div>\n\t<footer class=\"footer\">\n\t\t<div class=\"container footerdiv\">\n\t\t\t<span>Twig</span>\n\t\t</div>\n\t</footer>\n\n</body>\n</html>\n",
+			"file": "xIoT/app/views/layouts/application.html.erb",
+			"file_size": 1575,
+			"file_write_time": 131674472154509552,
+			"settings":
+			{
+				"buffer_size": 1575,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "class CreateAcentros < ActiveRecord::Migration[5.1]\n  def change\n    create_table :acentros do |t|\n      t.references :AEmpresa, foreign_key: true\n      t.string :nombre\n      t.string :descripcion\n      t.string :direccion\n      t.integer :numero\n      t.string :comuna\n      t.string :region\n      t.string :lat\n      t.string :lng\n\n      t.timestamps\n    end\n  end\nend\n",
+			"file": "xIoT/db/migrate/20180406002040_create_acentros.rb",
+			"file_size": 372,
+			"file_write_time": 131674476403983127,
+			"settings":
+			{
+				"buffer_size": 372,
 				"line_ending": "Unix"
 			}
 		}
@@ -73,12 +99,7 @@
 	},
 	"expanded_folders":
 	[
-		"/home/lacruz/Desktop/xIoT/xCount/xIoT",
-		"/home/lacruz/Desktop/xIoT/xCount/xIoT/app",
-		"/home/lacruz/Desktop/xIoT/xCount/xIoT/app/views",
-		"/home/lacruz/Desktop/xIoT/xCount/xIoT/app/views/event_ins",
-		"/home/lacruz/Desktop/xIoT/xCount/xIoT/app/views/servicios",
-		"/home/lacruz/Desktop/xIoT/xCount/xIoT/config"
+		"/home/lacruz/Escritorio/xIot/xCount/xIoT"
 	],
 	"file_history":
 	[
@@ -172,7 +193,7 @@
 	],
 	"find":
 	{
-		"height": 51.0
+		"height": 23.0
 	},
 	"find_in_files":
 	{
@@ -208,7 +229,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -231,6 +252,65 @@
 						"settings":
 						{
 							"syntax": "Packages/Rails/HTML (Rails).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "xIoT/app/views/layouts/application.html.erb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1575,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								693,
+								693
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "xIoT/db/migrate/20180406002040_create_acentros.rb",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 372,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								127,
+								127
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.sublime-syntax",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
@@ -287,7 +367,7 @@
 	"project": "xIoT.sublime-project",
 	"replace":
 	{
-		"height": 94.0
+		"height": 42.0
 	},
 	"save_all_on_build": true,
 	"select_file":

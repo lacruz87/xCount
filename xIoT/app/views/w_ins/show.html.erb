@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Event:</strong>
+  <%= @w_in.event %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @w_in.name %>
+</p>
+
+<p>
+  <strong>Data:</strong>
+  <%= @w_in.data %>
+</p>
+
+<p>
+  <strong>Coreid:</strong>
+  <%= @w_in.coreid %>
+</p>
+
+<p>
+  <strong>Published at:</strong>
+  <%= @w_in.published_at %>
+</p>
+
+<%= link_to 'Edit', edit_w_in_path(@w_in) %> |
+<%= link_to 'Back', w_ins_path %>

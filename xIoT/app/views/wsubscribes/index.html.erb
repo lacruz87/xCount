@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Wsubscribes</h1>
+
+<div class="table-responsive">
+<table class="table">
+  <thead>
+    <tr>
+      <th>Coreid</th>
+      <th>Id empresa</th>
+      <th>Empresa nombre</th>
+      <th>Empresa app url</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @wsubscribes.each do |wsubscribe| %>
+      <tr>
+        <td><%= wsubscribe.coreid %></td>
+        <td><%= wsubscribe.id_empresa %></td>
+        <td><%= wsubscribe.empresa_nombre %></td>
+        <td><%= wsubscribe.empresa_app_url %></td>
+        <td><%= link_to 'Show', wsubscribe %></td>
+        <td><%= link_to 'Edit', edit_wsubscribe_path(wsubscribe) %></td>
+        <td><%= link_to 'Destroy', wsubscribe, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+<br>
+
+<%= link_to 'New Wsubscribe', new_wsubscribe_path %>

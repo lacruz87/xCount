@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  coreid: MyString
+  id_empresa: MyString
+  empresa_nombre: MyString
+  empresa_app_url: MyString
+
+two:
+  coreid: MyString
+  id_empresa: MyString
+  empresa_nombre: MyString
+  empresa_app_url: MyString

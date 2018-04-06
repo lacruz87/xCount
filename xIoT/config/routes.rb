@@ -1,4 +1,23 @@
 Rails.application.routes.draw do
+  resources :e1reporting_prods
+  resources :e1produccions
+  resources :e1planprods
+  resources :e1articulos
+  resources :e1evento_dispositivos
+  resources :e1tipo_eventos
+  resources :e1dispositivos
+  resources :e1recursos
+  resources :e1ubicacions
+  resources :e1centros
+  resources :e1empresas
+  resources :wsubscribes
+  resources :w_ins
+  resources :aevento_dispositivos
+  resources :atipo_eventos
+  resources :adispositivos
+  resources :arecursos
+  resources :acentros
+  resources :aempresas
   resources :event_ins
   resources :sensores
   resources :empresas
@@ -11,7 +30,7 @@ Rails.application.routes.draw do
   get 'servicios/reporte01'
 
   resources :particles
-  get 'api/particle_in', :defaults => { :format => 'json' }
+  get 'api/particle_in', to: 'api#particle_in2', :defaults => { :format => 'json' }
   get 'api/deleteAll', :defaults => { :format => 'json' }
   get 'api/show', :defaults => { :format => 'json' }
 

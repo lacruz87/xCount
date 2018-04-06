@@ -1,0 +1,66 @@
+<p id="notice"><%= notice %></p>
+
+<h1>E1reporting Prods</h1>
+
+<div class="table-responsive">
+<table class="table">
+  <thead>
+    <tr>
+      <th>Timestamp</th>
+      <th>Recurso</th>
+      <th>Centro</th>
+      <th>Ubicacion</th>
+      <th>Timestamp 5m</th>
+      <th>Timestamp 10m</th>
+      <th>Timestamp 30m</th>
+      <th>Timestamp 1h</th>
+      <th>Timestamp 8h</th>
+      <th>Timestamp 24h</th>
+      <th>Timestamp w</th>
+      <th>Timestamp mm</th>
+      <th>Timestamp y</th>
+      <th>Q</th>
+      <th>Time q</th>
+      <th>Categoria</th>
+      <th>Articulo</th>
+      <th>Familia</th>
+      <th>Sub familia</th>
+      <th>Referencia</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @e1reporting_prods.each do |e1reporting_prod| %>
+      <tr>
+        <td><%= e1reporting_prod.Timestamp %></td>
+        <td><%= e1reporting_prod.recurso %></td>
+        <td><%= e1reporting_prod.centro %></td>
+        <td><%= e1reporting_prod.ubicacion %></td>
+        <td><%= e1reporting_prod.timestamp_5m %></td>
+        <td><%= e1reporting_prod.timestamp_10m %></td>
+        <td><%= e1reporting_prod.timestamp_30m %></td>
+        <td><%= e1reporting_prod.timestamp_1h %></td>
+        <td><%= e1reporting_prod.timestamp_8h %></td>
+        <td><%= e1reporting_prod.timestamp_24h %></td>
+        <td><%= e1reporting_prod.timestamp_w %></td>
+        <td><%= e1reporting_prod.timestamp_MM %></td>
+        <td><%= e1reporting_prod.timestamp_Y %></td>
+        <td><%= e1reporting_prod.Q %></td>
+        <td><%= e1reporting_prod.time_Q %></td>
+        <td><%= e1reporting_prod.categoria %></td>
+        <td><%= e1reporting_prod.articulo %></td>
+        <td><%= e1reporting_prod.familia %></td>
+        <td><%= e1reporting_prod.sub_familia %></td>
+        <td><%= e1reporting_prod.referencia %></td>
+        <td><%= link_to 'Show', e1reporting_prod %></td>
+        <td><%= link_to 'Edit', edit_e1reporting_prod_path(e1reporting_prod) %></td>
+        <td><%= link_to 'Destroy', e1reporting_prod, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+<br>
+
+<%= link_to 'New E1reporting Prod', new_e1reporting_prod_path %>

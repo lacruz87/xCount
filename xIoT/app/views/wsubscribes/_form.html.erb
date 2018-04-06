@@ -1,0 +1,37 @@
+<%= form_with(model: wsubscribe, local: true) do |form| %>
+  <% if wsubscribe.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(wsubscribe.errors.count, "error") %> prohibited this wsubscribe from being saved:</h2>
+
+      <ul>
+      <% wsubscribe.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :coreid %>
+    <%= form.text_field :coreid, id: :wsubscribe_coreid %>
+  </div>
+
+  <div class="field">
+    <%= form.label :id_empresa %>
+    <%= form.text_field :id_empresa, id: :wsubscribe_id_empresa %>
+  </div>
+
+  <div class="field">
+    <%= form.label :empresa_nombre %>
+    <%= form.text_field :empresa_nombre, id: :wsubscribe_empresa_nombre %>
+  </div>
+
+  <div class="field">
+    <%= form.label :empresa_app_url %>
+    <%= form.text_field :empresa_app_url, id: :wsubscribe_empresa_app_url %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
