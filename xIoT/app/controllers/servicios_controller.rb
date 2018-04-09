@@ -70,4 +70,12 @@ class ServiciosController < ApplicationController
 
 
   end
+
+
+  def reporte02
+
+  end
+
+
+  
 end

@@ -28,6 +28,7 @@ Rails.application.routes.draw do
   get 'servicios/grafico01'
 
   get 'servicios/reporte01'
+  get 'servicios/reporte02'
 
   resources :particles
   get 'api/particle_in', to: 'api#particle_in2', :defaults => { :format => 'json' }

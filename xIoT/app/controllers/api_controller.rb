@@ -50,7 +50,11 @@ class ApiController < ApplicationController
 
 					@e1reporting_prod.timestamp_24h=adjusted_datetime.beginning_of_day()
 
-					#@e1reporting_prod.timestamp_w=adjusted_datetime.beginning_of_day()
+					@e1reporting_prod.timestamp_w=adjusted_datetime.beginning_of_week()
+
+					@e1reporting_prod.timestamp_MM=adjusted_datetime.beginning_of_month()
+
+					@e1reporting_prod.timestamp_Y=adjusted_datetime.year #adjusted_datetime.beginning_of_year()
 
 					@e1reporting_prod.centro=@e1produccion.e1recurso.e1centro.nombre
 
@@ -61,19 +65,16 @@ class ApiController < ApplicationController
 					ftiempo=(fValor / @e1produccion.e1recurso.productividad_hora)
 					@e1reporting_prod.time_Q=ftiempo.minutes
 
-
-
-					
+					@e1reporting_prod.categoria=@e1evento_dispositivo[0].e1tipo_evento.nombre					
 
 					@e1reporting_prod.save
-
-
-
-
 
 				end
 
 			end
+			@out_put="{\"status\":\"ok\" }" 
+		else
+			@out_put="{\"status\":\"coreid no registrado\" }"
 		end
 		#@out_put=@Jo[0]#{}"{status:ok}"  
 		render :json=>@out_put  
